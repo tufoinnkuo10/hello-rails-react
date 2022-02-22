@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  resources :messages
 
-  root "messages#index"
+  root 'static#index'
 
   namespace :v1, defaults: { format: 'json' } do
     get 'messages', to: 'messages#index'
